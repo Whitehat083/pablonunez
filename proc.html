@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aprenda 5 passos práticos para superar a procrastinação e aumentar sua produtividade com Pablo Nunez."
+    />
+    <meta
+      name="keywords"
+      content="procrastinação, produtividade, autodesenvolvimento, Pablo Nunez, motivação"
+    />
+    <meta name="author" content="Pablo Nunez" />
+    <title>Como Superar a Procrastinação em 5 Passos - Pablo Nunez</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32" />
+    <style>
+      /* Custom styles for blur and animations */
+      .hero-bg {
+        background-image: url('vena.png');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      .hero-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        z-index: 1;
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .btn-primary {
+        transition: all 0.3s ease;
+      }
+      .btn-primary:hover {
+        transform: scale(1.1);
+        background-color: #003087;
+      }
+      .social-icon {
+        transition: all 0.3s ease;
+      }
+      .social-icon:hover {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-800 bg-gray-100">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white shadow-md z-50">
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="text-2xl font-bold text-[#001F3F] hover:opacity-80 transition-opacity"
+          >Pablo Nunez</a
+        >
+        <div class="hidden md:flex space-x-6">
+          <a
+            href="index.html#inicio"
+            class="text-[#001F3F] hover:text-[#003087]"
+            >Início</a
+          >
+          <a href="index.html#sobre" class="text-[#001F3F] hover:text-[#003087]"
+            >Sobre</a
+          >
+          <a
+            href="index.html#missao"
+            class="text-[#001F3F] hover:text-[#003087]"
+            >Missão</a
+          >
+          <a
+            href="index.html#livros"
+            class="text-[#001F3F] hover:text-[#003087]"
+            >Livros</a
+          >
+          <a
+            href="index.html#empresa"
+            class="text-[#001F3F] hover:text-[#003087]"
+            >Empresa</a
+          >
+          <a
+            href="index.html#contato"
+            class="text-[#001F3F] hover:text-[#003087]"
+            >Contato</a
+          >
+        </div>
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-toggle"
+          class="md:hidden text-[#001F3F] focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <a
+          href="index.html#inicio"
+          class="block px-4 py-2 text-[#001F3F] hover:bg-gray-100"
+          >Início</a
+        >
+        <a
+          href="index.html#sobre"
+          class="block px-4 py-2 text-[#001F3F] hover:bg-gray-100"
+          >Sobre</a
+        >
+        <a
+          href="index.html#missao"
+          class="block px-4 py-2 text-[#001F3F] hover:bg-gray-100"
+          >Missão</a
+        >
+        <a
+          href="index.html#livros"
+          class="block px-4 py-2 text-[#001F3F] hover:bg-gray-100"
+          >Livros</a
+        >
+        <a
+          href="index.html#empresa"
+          class="block px-4 py-2 text-[#001F3F] hover:bg-gray-100"
+          >Empresa</a
+        >
+        <a
+          href="index.html#contato"
+          class="block px-4 py-2 text-[#001F3F] hover:bg-gray-100"
+          >Contato</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="hero-bg h-96 flex items-center justify-center text-center text-white"
+    >
+      <div class="relative z-10">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">
+          Como Superar a Procrastinação em 5 Passos
+        </h1>
+        <p class="text-base md:text-lg mb-6">
+          Aprenda estratégias práticas para vencer a procrastinação e aumentar
+          sua produtividade.
+        </p>
+        <a
+          href="#content"
+          class="btn-primary inline-block bg-[#001F3F] text-white px-6 py-3 rounded-md"
+          >Leia o Artigo</a
+        >
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section id="content" class="py-16 bg-white">
+      <div class="container mx-auto px-4 fade-in">
+        <h2 class="text-2xl md:text-3xl font-bold text-[#001F3F] mb-6">
+          5 Passos para Superar a Procrastinação
+        </h2>
+        <p class="text-base md:text-lg text-gray-600 mb-8">
+          Procrastinação é o hábito de adiar tarefas importantes, mas com as
+          estratégias certas, você pode vencê-la e alcançar seus objetivos. Aqui
+          estão cinco passos práticos para transformar sua produtividade:
+        </p>
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-xl md:text-2xl font-semibold text-[#001F3F] mb-2">
+              1. Defina Metas Claras
+            </h3>
+            <p class="text-base text-gray-600">
+              Estabeleça objetivos específicos e mensuráveis. Em vez de “estudar
+              mais”, defina “estudar 2 horas de matemática às 19h”. Metas claras
+              reduzem a ambiguidade e facilitam o foco.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl md:text-2xl font-semibold text-[#001F3F] mb-2">
+              2. Divida Tarefas em Pequenos Passos
+            </h3>
+            <p class="text-base text-gray-600">
+              Tarefas grandes podem parecer assustadoras. Divida-as em etapas
+              menores, como “escrever introdução” ou “pesquisar fontes”. Conclua
+              uma etapa de cada vez para manter o progresso.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl md:text-2xl font-semibold text-[#001F3F] mb-2">
+              3. Use a Técnica Pomodoro
+            </h3>
+            <p class="text-base text-gray-600">
+              Trabalhe por 25 minutos com foco total e faça uma pausa de 5
+              minutos. Após quatro ciclos, faça uma pausa maior. Essa técnica
+              melhora a concentração e evita a fadiga.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl md:text-2xl font-semibold text-[#001F3F] mb-2">
+              4. Elimine Distrações
+            </h3>
+            <p class="text-base text-gray-600">
+              Identifique o que te distrai (ex.: redes sociais, notificações) e
+              crie um ambiente focado. Desligue notificações ou use aplicativos
+              como Forest para manter o foco.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl md:text-2xl font-semibold text-[#001F3F] mb-2">
+              5. Recompense-se
+            </h3>
+            <p class="text-base text-gray-600">
+              Estabeleça recompensas para cada tarefa concluída, como um café ou
+              um episódio de sua série favorita. Isso cria um ciclo positivo de
+              motivação e realização.
+            </p>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <p class="text-lg italic text-[#001F3F] mb-4">
+            “A mente genial começa com um passo ousado.”
+          </p>
+          <a
+            href="https://pay.kiwify.com.br/UbgrqsC"
+            class="btn-primary inline-block bg-[#001F3F] text-white px-6 py-3 rounded-md"
+            >Conheça Meu Livro: O Fim da Procrastinação</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4 text-center fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#001F3F] mb-4">
+          Junte-se à Minha Comunidade
+        </h2>
+        <p class="text-base md:text-lg text-gray-600 mb-6">
+          Receba dicas exclusivas de autodesenvolvimento e motivação diretamente
+          no seu e-mail.
+        </p>
+        <form
+          action="https://formspree.io/f/thepdenegocios@gmail.com"
+          method="POST"
+          class="max-w-md mx-auto"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Seu e-mail"
+            required
+            class="w-full p-3 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#001F3F]"
+            aria-label="E-mail"
+          />
+          <button
+            type="submit"
+            class="btn-primary bg-[#001F3F] text-white px-6 py-3 rounded-md"
+          >
+            Inscrever-se
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#001F3F] text-white py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-sm mb-4">
+          © 2025 Pablo Nunez. Todos os direitos reservados.
+        </p>
+        <div class="flex justify-center space-x-6">
+          <a href="https://instagram.com/pablonunes.s" class="social-icon">
+            <img src="insta.png" alt="Instagram" class="w-12 h-12" />
+          </a>
+          <a href="https://youtube.com/@pablonunes.s" class="social-icon">
+            <img src="tutube.png" alt="YouTube" class="w-12 h-12" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+      // Mobile Menu Toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Intersection Observer for Fade-In Animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll('.fade-in').forEach((element) => {
+        observer.observe(element);
+      });
+
+      // Real-time Form Validation
+      const form = document.querySelector('form');
+      const emailInput = form.querySelector('input[type="email"]');
+      emailInput.addEventListener('input', () => {
+        if (!emailInput.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+          emailInput.setCustomValidity('Por favor, insira um e-mail válido.');
+        } else {
+          emailInput.setCustomValidity('');
+        }
+      });
+    </script>
+  </body>
+</html>
